@@ -1,0 +1,129 @@
+# 1. Create a list names age_list with five interger elements
+
+age_list = [24,25,26,27,28]
+print(age_list)
+
+# 2. Create a list names name_list with five string elements
+
+name_list = ["Meera","Ravi","Anu","Amal","Jack"]
+print(name_list)
+
+# List Operations / Modifications
+# a. Append the string "Yazhini" to name_list.
+name_list.append("Yazhini")
+print(name_list)
+
+# b. Insert the element 30 at index 2 in age_list.
+age_list.insert(2,30)
+print(age_list)     # in place of 26, 30 got inserted
+
+# c.Remove the string "Yazhini" from name_list.
+name_list.remove("Yazhini")
+print(name_list)      # "Yazhini" is removed from the name list
+
+# d. Pop the last element from age_list
+age_list.pop()
+print(age_list)     # pop() will remove the last element from the list
+
+# e. Extend the age_list with additional ages [29, 30, 26]
+age_list.extend([29,30,26])
+print(age_list)        # To add multiple values in the given list we use extend
+
+# f. Sort age_list in descending order
+age_list.sort(reverse=True)
+print(age_list)     # It will reverse the complete number list in desc order
+
+# g. Find Max age, Min age and sum of all ages from age_list.
+
+max(age_list)
+print("Maximum age:", max(age_list))
+
+min(age_list)
+print("Minimum age:", min(age_list))
+
+sum(age_list)
+print("Sum age:", sum(age_list))
+
+# 3. Accessing List Elements:
+# a. Print the first element of name_list
+print(name_list[0])
+
+# b. Print the last element of name_list
+print(name_list[-1])
+
+# c. Print the elements from index 2 to index 4 in name_list
+print(name_list[2:5])
+
+# d. Print the elements of name_list in reverse order.
+print(name_list[::-1])       # this gives us the name_list in reverse order
+
+# Dictionary (Creation, Modification and Access)
+# a. Create a dictionary named student_marks that maps the names of five students to their marks (use scale of from 0 to 100).
+
+student_marks = {
+    "Meera" : 75,
+    "Anu" : 57,
+    "Rahul" : 69,
+    "Jack" : 91,
+    "Amal" : 73
+}
+
+print(student_marks["Jack"])    # b. Access and print the marks of Jack
+
+student_marks["Janani"] = 80      # c. Add new student Janani with a mark of 80
+
+student_marks["Rahul"] = 82       # d. Updated Rahul's marks from "69" to "82"
+print(student_marks)  
+
+# e. Use the keys(), values(), and items() methods to print all keys, values, and key-value pairs in the student_marks dictionary.
+
+print(student_marks.keys())       # it shows the students name 
+
+print(student_marks.values())      # The marks will be displayed
+
+print(student_marks.items())      # here the student name + marks will be displayed
+
+
+# Sets (Operations)
+
+# a.Create a set called my_set with following values: ['a','e','i','o','u','a','a','i']
+
+my_set = {'a','e','i','o','u','a','a','i'}    # sets stores only unique values here 'a' is repeated 3 times and 'i' is repeated 2 times
+print(my_set)       # here the repeated values will disappear and the output will be unordered collection of set.
+
+# b. Attempt to change the value of my_set[4] = 's'. If code throws an error, provide an explanation.
+
+# my_set[4] = 's'     # TypeError: 'set' object does not support item assignment
+# set doesn't have indexes like a list they are unordered and do not support indexing.
+
+# c. Create two sets: set1 with values: {1, 3, 5, 7, 9} set2 with values: {2, 3, 5, 8, 10}
+set1 = {1, 3, 5, 7, 9}
+set2 = {2, 3, 5, 8, 10}
+
+print(set1 | set2)   # Union (|) combines both sets and removes duplicate values, giving {1, 2, 3, 5, 7, 8, 9, 10}
+
+print(set1 & set2)    # Intersection (&) gives the common values  - {3, 5}
+
+
+# Operators & Conditional Statements : (IF, ELIF, ELSE)
+
+# 1.Prompt user for Input. Score range should be from 0 to 10 (both inclusive).
+score = int(input("Enter your score (0-10): "))
+
+# 2.Find the performance category
+if score > 7:         # a.Above average - score greater than 7          
+    print("Above Average")
+elif score >= 4:      # b.Average- Score between 4 and 7
+    print("Average")
+else:
+    print("Below Average")    # c. Below Average - Score lesser than 4
+
+
+# 3.Print the Performance category
+if score > 7:
+    print("Above Average - Excellent performance! Keep it up.")
+elif score >= 4:
+    print("Average - Good effort! Keep practicing to improve.")
+else:
+    print("Below Average - Need to improve your performance.")
+    
